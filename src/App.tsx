@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import { CardAlarm } from './components/CardAlarm'
 import './App.css'
 
 function App() {
@@ -27,6 +28,13 @@ function App() {
         >
           Count is {count}
         </button>
+        <CardAlarm
+          sport="Label"
+          title="Label"
+          subtitle="Label"
+          date="12/10/2022"
+          initialEnabled={true}
+        />
       </section>
 
       <div className="ticks"></div>
