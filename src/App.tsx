@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import { CardAlarm } from './components/CardAlarm'
+import { CardMatch } from './components/CardMatch'
 import './App.css'
 
 function App() {
@@ -34,6 +35,16 @@ function App() {
           subtitle="Label"
           date="12/10/2022"
           initialEnabled={true}
+        />
+        <CardMatch
+          sportLabel="Label"
+          team1="Team 1"
+          team2="Team 2"
+          date="01/01"
+          time="18:00"
+          marketLabel="Market label"
+          odds={["1", "1.55", "1.55"]}
+          badgeNumber="+ 3490"
         />
       </section>
 
