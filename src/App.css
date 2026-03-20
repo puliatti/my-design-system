@@ -407,9 +407,9 @@
 }
 
 .card-match__odds-btn {
-  height: 46px;
-  background: #f0f2f3;
-  border: 1px solid #e0e0e0;
+  height: 56px;
+  background: #f3f5f6;
+  border: 1px solid #e8eaec;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -419,14 +419,17 @@
   cursor: pointer;
 }
 
+.card-match__odds-label {
+  font-size: 10px;
+  font-weight: 400;
+  color: #5c6063;
+  line-height: 12px;
+}
+
 .card-match__odds-value {
   font-size: 16px;
   font-weight: 700;
   color: #222;
-}
-
-.card-match__odds-label {
-  font-size: 10px;
-  color: #5c6063;
+  line-height: 18px;
 }
 

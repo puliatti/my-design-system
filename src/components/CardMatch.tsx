@@ -3,6 +3,11 @@ const imgVector = "http://localhost:3845/assets/5f725ffb3cbc79c57c54c35dedc7d81f
 const imgSoccerItalia1328Lazio = "http://localhost:3845/assets/892f62562728dad303b5f8d9c012ea327d02fc29.png";
 const imgSoccerItalia1322Fiorentina = "http://localhost:3845/assets/f3b443c4ad23f8641abdd7dc7f86812b131a881d.png";
 
+type OddsOption = {
+  label: string;
+  value: string;
+};
+
 type CardMatchProps = {
   sportLabel?: string;
   team1?: string;
@@ -10,7 +15,7 @@ type CardMatchProps = {
   date?: string;
   time?: string;
   marketLabel?: string;
-  odds?: [string, string, string];
+  odds?: OddsOption[];
   badgeLive?: boolean;
   badgePromo?: boolean;
   badgeNumber?: string;
@@ -23,7 +28,11 @@ export function CardMatch({
   date = "01/01",
   time = "18:00",
   marketLabel = "Market label",
-  odds = ["1", "1.55", "1.55"],
+  odds = [
+    { label: "1", value: "1.55" },
+    { label: "1", value: "1.55" },
+    { label: "1", value: "1.55" },
+  ],
   badgeLive = false,
   badgePromo = false,
   badgeNumber = "+ 3490",
@@ -70,10 +79,10 @@ export function CardMatch({
       <div className="card-match__market-label">{marketLabel}</div>
 
       <div className="card-match__odds">
-        {odds.map((o, index) => (
+        {odds.map((opt, index) => (
           <button key={index} type="button" className="card-match__odds-btn">
-            <div className="card-match__odds-value">{o}</div>
-            <div className="card-match__odds-label">{index === 0 ? "1" : ""}</div>
+            <div className="card-match__odds-label">{opt.label}</div>
+            <div className="card-match__odds-value">{opt.value}</div>
           </button>
         ))}
       </div>

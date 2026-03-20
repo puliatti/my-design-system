@@ -43,7 +43,11 @@ function App() {
           date="01/01"
           time="18:00"
           marketLabel="Market label"
-          odds={["1", "1.55", "1.55"]}
+          odds={[
+            { label: "1", value: "1.55" },
+            { label: "1", value: "1.55" },
+            { label: "1", value: "1.55" },
+          ]}
           badgeNumber="+ 3490"
         />
       </section>
