@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import { CardAlarm } from './components/CardAlarm'
 import { CardMatch } from './components/CardMatch'
+import { ReadyToUseCardQuizbet } from './components/ReadyToUseCardQuizbet'
 import './App.css'
 
 function App() {
@@ -49,6 +50,21 @@ function App() {
             { label: "1", value: "1.55" },
           ]}
           badgeNumber="+ 3490"
+        />
+
+        <ReadyToUseCardQuizbet
+          sport="ITA Serie A"
+          teamLeft="Lazio"
+          teamRight="Fiorentina"
+          scoreDate="01/01 18:00"
+          statusText="Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          currentQuestion={1}
+          totalQuestions={7}
+          oddsOptions={[
+            { label: "1", value: "1.55" },
+            { label: "1", value: "1.55" },
+            { label: "1", value: "1.55" },
+          ]}
         />
       </section>
 

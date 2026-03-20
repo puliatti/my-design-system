@@ -433,3 +433,106 @@
   line-height: 18px;
 }
 
+.quizbet-card {
+  width: 328px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0e5138 0%, #0a3f2b 60%, #ffffff 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  color: #ffffff;
+  border: 1px solid #0b3f2f;
+}
+
+.quizbet-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 10px;
+  position: relative;
+}
+
+.quizbet-card__team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.quizbet-card__shirt {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #5a9be1;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.2);
+}
+
+.quizbet-card__shirt--alt {
+  background-color: #8f4ba9;
+}
+
+.quizbet-card__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.quizbet-card__sport, .quizbet-card__score-date {
+  font-weight: 500;
+}
+
+.quizbet-card__counter {
+  font-size: 10px;
+  color: rgba(255,255,255,0.85);
+}
+
+.quizbet-card__body {
+  background: #ffffff;
+  color: #222222;
+  padding: 14px;
+  text-align: center;
+}
+
+.quizbet-card__question {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.quizbet-card__odds-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px;
+  background: #f8f9fa;
+}
+
+.quizbet-card__odd-button {
+  border: 1px solid #e7eaed;
+  border-radius: 8px;
+  background: #f5f6f7;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.quizbet-card__odd-label {
+  font-size: 10px;
+  color: #6b6f72;
+}
+
+.quizbet-card__odd-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+}
+
+
