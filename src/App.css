@@ -512,6 +512,10 @@
   background: #f8f9fa;
 }
 
+.quizbet-card--compact .quizbet-card__odds-row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .quizbet-card__odd-button {
   border: 1px solid #e7eaed;
   border-radius: 8px;

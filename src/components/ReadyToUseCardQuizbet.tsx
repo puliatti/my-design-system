@@ -13,6 +13,7 @@ type ReadyToUseCardQuizbetProps = {
   totalQuestions?: number;
   oddsOptions?: OddsButton[];
   onSelectOdd?: (odd: OddsButton) => void;
+  variant?: "standard" | "compact";
 };
 
 export function ReadyToUseCardQuizbet({
@@ -29,9 +30,12 @@ export function ReadyToUseCardQuizbet({
     { label: "1", value: "1.55" },
   ],
   onSelectOdd,
-}: ReadyToUseCardQuizbetProps) {
+  variant = "standard",
+}: ReadyToUseCardQuizbetProps & { variant?: "standard" | "compact" }) {
+  const twoOptions = variant === "compact";
+
   return (
-    <article className="quizbet-card" aria-label="Quizbet card">
+    <article className={`quizbet-card ${twoOptions ? "quizbet-card--compact" : ""}`} aria-label="Quizbet card">
       <div className="quizbet-card__header">
         <div className="quizbet-card__team quizbet-card__team--left">
           <div className="quizbet-card__shirt" aria-hidden="true" />
@@ -55,7 +59,7 @@ export function ReadyToUseCardQuizbet({
       </div>
 
       <div className="quizbet-card__odds-row">
-        {oddsOptions.map((odds, idx) => (
+        {(twoOptions ? oddsOptions.slice(0, 2) : oddsOptions).map((odds, idx) => (
           <button
             key={idx}
             type="button"

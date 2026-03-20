@@ -66,6 +66,21 @@ function App() {
             { label: "1", value: "1.55" },
           ]}
         />
+
+        <ReadyToUseCardQuizbet
+          sport="ITA Serie A"
+          teamLeft="Lazio"
+          teamRight="Fiorentina"
+          scoreDate="01/01 18:00"
+          statusText="Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          currentQuestion={1}
+          totalQuestions={7}
+          variant="compact"
+          oddsOptions={[
+            { label: "1", value: "1.55" },
+            { label: "1", value: "1.55" },
+          ]}
+        />
       </section>
 
       <div className="ticks"></div>
