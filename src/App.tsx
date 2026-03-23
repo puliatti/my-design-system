@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import { CardAlarm } from './components/CardAlarm'
+import { CardButton } from './components/CardButton'
 import { CardMatch } from './components/CardMatch'
 import { ReadyToUseCardQuizbet } from './components/ReadyToUseCardQuizbet'
 import './App.css'
@@ -30,6 +31,12 @@ function App() {
         >
           Count is {count}
         </button>
+        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 24 }}>
+          <CardButton label="Calcio" type="speciali" />
+          <CardButton label="Tennis" type="speciali" badgeNew />
+          <CardButton label="Basket" type="recent" />
+        </div>
+
         <CardAlarm
           sport="Label"
           title="Label"
